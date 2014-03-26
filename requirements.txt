@@ -1,0 +1,6 @@
+django==1.6.2
+python-amazon-simple-product-api==1.4.0
+lxml==3.3.3
+
+# sudo apt-get install libxml2 libxml2-dev libxslt-dev
+# sudo apt-get install build-dep python-lxml

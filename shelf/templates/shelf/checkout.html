@@ -1,0 +1,19 @@
+
+{% extends 'shelf/base.html' %}
+
+{% block content %}
+
+<h2>You have borrowed this book</h2>
+
+<table>
+
+  <tr>
+  	<td>{{ book.title }}</td>
+  	<td>{{ book.author }}</td>
+  	<td>{{ book.borrower}}</td>
+  </tr>
+
+</table>
+<!--<div>{{ results }}</div>-->
+
+{% endblock %}

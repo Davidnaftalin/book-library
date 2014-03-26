@@ -1,0 +1,27 @@
+
+{% extends 'shelf/base.html' %}
+
+{% block content %}
+
+<h2>Books</h2>
+
+<table>
+{{ error }}
+{% for book in results %}
+  <tr>
+  	<td>{{ book.title }}</td>
+  	<td>{{ book.author }}</td>
+  	<td>{{ book.borrower}}</td>
+  	<td>
+  		<form method="post">
+  			{% csrf_token %}
+  			<button id="borrow"><a href='{{ root_url }}/checkout/(?P<book_id>[\d-]+)/$'>Borrow</a></button>
+  			
+  		</form>
+  	</td>
+  </tr>
+{% endfor %}
+</table>
+<!--<div>{{ results }}</div>-->
+
+{% endblock %}
